@@ -1,0 +1,15 @@
+src/api/v1
+
+API ROute will have two routes, 
+if we take entire url there will be 3-4 parts.
+Protocol will be http/https
+
+dont add controller, add:
+middleware, model, service and utils
+
+inside src -> file called constants.js
+
+config in the roots
+assets in the root
+scripts in the root folder,
+template in the root folder.

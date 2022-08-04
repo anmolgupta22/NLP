@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NLP-Toolkit</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body onload="slider()" style="background-color:#282e09;">
+
+    <section>
+        <div class="banner">
+            <div class="slider">
+                <img src="{{ url_for('static', filename='slider2.jpg') }}" id="slideImg">
+            </div>
+            <div class="overlay" style=" background: linear-gradient(rgb(0,0,0,0.7),rgba(0,0,0,0.7));">
+                <div class="main-bar">
+                    <nav>
+                        <input type="checkbox" id="check">
+                        <label for="check" class="checkbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+                        <div class="logo-header">
+                            <a href="{{ url_for('index') }}">NLP-ToolKit</a>
+                        </div>
+                        <ul>
+                            <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="{{ url_for('summarizerPage') }}">Text-Summarizer</a></li>
+                            <li><a href="{{ url_for('sentimentalPage') }}">Sentimental analysis </a></li>
+                            <!--<li><a href="#">Grammer Checker</a></li>-->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="content">
+                    <h1>Welcome to Natural Language Processing!</h1>
+                    <h3></h3>
+                    <div>
+                        <a href="{{ url_for('summarizerPage') }}"><button type="button"> Summarize! </button></a>
+                        <a href="{{ url_for('sentimentalPage') }}"><button type="button" class="btn-2">Sentiment Review</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--**************************   Team Section ************************-->
+
+    <section class="team" id="about" style="background-image: -webkit-linear-gradient(#282e09, #1e113c);">
+        <h1 class="ha">Our Team Members</h1>
+        <div class="container">
+            <div class="card">
+                <div class="bg-image">
+                    <img src="{{ url_for('static', filename='slider2.jpg') }}">
+                </div>
+                <div class="pic">
+                    <img src="{{ url_for('static', filename='3.jpg') }}">
+                </div>
+                <div class="info">
+                    <h3>Dipan Das</h3>
+                    <span> <i class="fas fa-code"></i>Backend Developer</span>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="bg-image">
+                    <img src="{{ url_for('static', filename='slider2.jpg') }}">
+                </div>
+                <div class="pic">
+                    <img src="{{ url_for('static', filename='5.jpg') }}">
+                </div>
+                <div class="info">
+                    <h3>Tanay Joshi</h3>
+                    <span> <i class="fas fa-code"></i>Machine Learning Developer</span>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="bg-image">
+                    <img src="{{ url_for('static', filename='slider2.jpg') }}">
+                </div>
+                <div class="pic">
+                    <img src="{{ url_for('static', filename='1.jpg') }}">
+                </div>
+                <div class="info">
+                    <h3>Shubham Kumar</h3>
+                    <span> <i class="fas fa-code"></i>Frontend Developer</span>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/profile.php?id=100007891505843" class="fab fa-facebook-f"></a>
+                        <a href="https://www.instagram.com/shubham__07_/" class="fab fa-instagram"></a>
+                        <a href="https://github.com/Shubham-Kumar-87" class="fab fa-github"></a>
+                        <a href="https://www.linkedin.com/in/shubhamkr840/" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="bg-image">
+                    <img src="{{ url_for('static', filename='slider2.jpg') }}">
+                </div>
+                <div class="pic">
+                    <img src="{{ url_for('static', filename='4.jpg') }}">
+                </div>
+                <div class="info">
+                    <h3>Ansh Makkar</h3>
+                    <span> <i class="fas fa-code"></i>Machine Learning Developer</span>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="bg-image">
+                    <img src="{{ url_for('static', filename='slider2.jpg') }}">
+                </div>
+                <div class="pic">
+                    <img src="{{ url_for('static', filename='2.jpg') }}">
+                </div>
+                <div class="info">
+                    <h3>Anmol Gupta</h3>
+                    <span> <i class="fas fa-code"></i>Python Developer</span>
+                    <div class="icons">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer1">
+            <p>© 2022 Copyright: <a href="#">MCA VIT Bhopal University</a></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- <div class="text-center text-dark p-3" style="background-color: #dee12c;">
+    © 2022 Copyright:
+    <a class="text-dark" href="#">MCA VIT Bhopal University</a>
+  </div> -->
+    <!-- Copyright
+</footer>
+ -->
+
+
+    <script>
+        var slideImg = document.getElementById("slideImg");
+        var images = new Array(
+            "{{ url_for('static', filename='slider4.jpg') }}",
+            "{{ url_for('static', filename='slider2.jpg') }}",
+            "{{ url_for('static', filename='slider1.jpg') }}",
+            "{{ url_for('static', filename='slider3.jpg') }}",
+
+        );
+        var len = images.length;
+        var i = 0;
+
+        function slider() {
+            if (i > len - 1) {
+                i = 0;
+            }
+            slideImg.src = images[i];
+            i++;
+            setTimeout('slider()', 3000);
+        }
+    </script>
+
+</body>
+
+</html>
